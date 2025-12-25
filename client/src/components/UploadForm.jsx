@@ -41,6 +41,9 @@ const UploadForm = ({ setResult, setLoading }) => {
                 <option>Frontend Developer</option>
                 <option>Backend Developer</option>
                 <option>Data Analyst</option>
+                <option>UI/UX Designer</option>
+                <option>Data Scientist</option>
+                <option>Data Engineer</option>
             </select>
 
             <button onClick={handleSubmit}>Analyze</button>
