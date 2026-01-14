@@ -1,22 +1,34 @@
-import { useState } from "react";
-import UploadForm from "./components/UploadForm";
-import ResultCard from "./components/ResultCard";
 import "./App.css";
 
 function App() {
-  const [result, setResult] = useState("");
-  const [loading, setLoading] = useState(false);
-
   return (
-    <div className="container">
-      <h1>ResumeIQ</h1>
-      <p>AI-powered Career Readiness Checker</p>
+    <div className="app">
+      <nav className="navbar">
+        <div className="logo">ResumeIQ</div>
+        <div className="nav-right">
+          <button className="login">Log in</button>
+          <button className="signup">Sign up</button>
+        </div>
+      </nav>
 
-      <UploadForm setResult={setResult} setLoading={setLoading} />
+      <main className="hero">
+        <h1>
+          Your career is <br /> your canvas.
+        </h1>
 
-      {loading && <p>Analyzing resume...</p>}
+        <p>
+          ResumeIQ uses AI to analyze resumes and guide you toward job-ready
+          success.
+        </p>
 
-      <ResultCard result={result} />
+        <div className="input-box">
+          <input
+            type="file"
+            accept="application/pdf"
+          />
+          <button>Start with AI</button>
+        </div>
+      </main>
     </div>
   );
 }
